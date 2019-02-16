@@ -26,7 +26,7 @@
         <div class="header__logo-wrapper">
           <img
             class="header__logo"
-            src="/images/RMJ_Logo.png"
+            src="/dist/images/RMJ_Logo.png"
             alt="RMJ Logo"
           />
         </div>
@@ -66,7 +66,7 @@
           <div class="hero__slider">
             <div class="hero__cell hero__cell--1"></div>
           </div>
-        </div>
+        <!-- </div>
 
         <form method="POST" data-netlify="true" class="form">
           <div class="field"><input type="text" name="name" id="name" placeholder="Name"></div>
@@ -79,6 +79,87 @@
           <div class="field"><textarea name="message" id="message" placeholder="Message" rows="10"></textarea></div>
           <div class="field"><div data-netlify-recaptcha="true"></div></div>
           <ul class="actions"><li><input class="btn" type="submit" value="Get In Contact"></li></ul>
+        </form> -->
+
+        <form method="POST" data-netlify="true" class="form">
+          <!-- Name Field --> 
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name" required>
+          </div>
+          <!-- Address Field -->
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Enter address">
+          </div>
+          <!-- City Field -->
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" placeholder="Enter city">
+          </div>
+          <!-- State Field -->
+          <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" class="form-control" id="state" placeholder="Enter state">
+          </div>
+          <!-- Zip Field -->
+          <div class="form-group">
+            <label for="zip">Zip</label>
+            <input type="text" class="form-control" id="zip" placeholder="Enter zip">
+          </div>
+          <!-- Phone Field -->
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            required>
+          </div>
+          <!-- <span style="font-size: 12px">Format: 123-456-7890</span> -->
+          <!-- Email Field -->
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+          </div>
+          <!-- Type of Lot -->
+          <div class="form-group">
+            <label for="typeOfLot">Type of Lot</label>
+            <select class="form-control" id="typeOfLot">
+              <option>Inside</option>
+              <option>Cul de sac</option>
+              <option>Corner</option>
+            </select>
+          </div>
+          <!-- Type of Service -->
+          <div class="form-group">
+            <label for="typeOfService">Type of Service</label>
+            <select class="form-control" id="typeOfService">
+              <option>Weekly</option>
+              <option>Full Service</option>
+            </select>
+          </div>
+          <!-- Pets -->
+          <div class="form-group">
+            <label for="pets">Pets in yard?</label>
+            <select class="form-control" id="pets">
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+          <!-- Gate Locks -->
+          <div class="form-group">
+            <label for="gatelocks">Gates Locked?</label>
+            <select class="form-control" id="gatelocks">
+              <option>Weekly</option>
+              <option>Full Service</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <div data-netlify-recaptcha="true"></div>
+          </div>
+          <!-- <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check box example</label>
+          </div> -->
+          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
         <div class="services">
