@@ -4,45 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>RMJ Landscapes, Inc</title>
+    <!-- FontAwesome -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
+    <!-- Bootstrap -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <!-- Flickity -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <!-- Main -->
     <link rel="stylesheet" href="css/main.css" />
-    <title>RMJ Landscapes, Inc</title>
   </head>
 
   <body>
     <div class="container">
+      <!-- Header Section -->
       <header class="header">
         <div class="header__logo-wrapper">
+          <a href="/">
+            <img
+              class="header__logo"
+              src="/dist/images/RMJ_Logo.png"
+              alt="RMJ Logo"
+            />
+          </a>
+        </div>
+        <div class="header__accolades">
           <img
-            class="header__logo"
-            src="/dist/images/RMJ_Logo.png"
-            alt="RMJ Logo"
+            class="header__accolade"
+            src="/dist/images/2008.png"
+            alt="2008 Award"
+          />
+          <img
+            class="header__accolade"
+            src="/dist/images/2009.png"
+            alt="2009 Award"
+          />
+          <img
+            class="header__accolade"
+            src="/dist/images/2010.png"
+            alt="2010 Award"
+          />
+          <img
+            class="header__accolade"
+            src="/dist/images/bbb.png"
+            alt="BBB accredited business"
           />
         </div>
-        <div class="header__info">
-          <h2 class="header__name">RMJ Landscapes, Inc.</h2>
-          <address>
-            <span class="po-box">PO Box 940144 </span
-            ><span class="city">Plano</span>, <span class="state">TX</span>
-            <span class="zip">75094</span>
-            <a href="tel:972-424-7252"
-              ><span class="phone-number">972-424-7251</span></a
+        <div class="header__cta-wrapper">
+          <div class="header__cta">
+            <a href="tel:972-424-7251" class="btn header__cta-btn"
+              >Free Estimates: 972-424-7251</a
             >
-          </address>
+          </div>
+          <div class="header__cta">
+            <a href="#" class="btn header__cta-btn">Get a Quote!</a>
+          </div>
         </div>
       </header>
 
+      <!-- Navigation Section -->
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item">
@@ -63,11 +96,16 @@
         </ul>
       </nav>
 
+      <!-- Main Content Section -->
       <main class="main">
         <!-- Hero Section -->
         <div class="hero">
           <div class="hero__slider">
             <div class="hero__cell hero__cell--1"></div>
+            <div class="hero__cell hero__cell--2"></div>
+            <div class="hero__cell hero__cell--3"></div>
+            <div class="hero__cell hero__cell--4"></div>
+            <div class="hero__cell hero__cell--5"></div>
           </div>
         </div>
 
@@ -88,7 +126,7 @@
               />
             </div>
             <!-- Address Field -->
-            <div class="form-group contact__form-field">
+            <!-- <div class="form-group contact__form-field">
               <label for="address">Address</label>
               <input
                 type="text"
@@ -97,9 +135,9 @@
                 name="address"
                 placeholder="Enter address"
               />
-            </div>
+            </div> -->
             <!-- City Field -->
-            <div class="form-group contact__form-field">
+            <!-- <div class="form-group contact__form-field">
               <label for="city">City</label>
               <input
                 type="text"
@@ -108,9 +146,9 @@
                 name="city"
                 placeholder="Enter city"
               />
-            </div>
+            </div> -->
             <!-- State Field -->
-            <div class="form-group contact__form-field">
+            <!-- <div class="form-group contact__form-field">
               <label for="state">State</label>
               <select
                 class="form-control contact__form-input"
@@ -169,9 +207,9 @@
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
               </select>
-            </div>
+            </div> -->
             <!-- Zip Field -->
-            <div class="form-group contact__form-field">
+            <!-- <div class="form-group contact__form-field">
               <label for="zip">Zip</label>
               <input
                 type="text"
@@ -180,9 +218,9 @@
                 name="zip"
                 placeholder="Enter zip"
               />
-            </div>
+            </div> -->
             <!-- Phone Field -->
-            <div class="form-group contact__form-field">
+            <!-- <div class="form-group contact__form-field">
               <label for="phone">Phone</label>
               <input
                 type="tel"
@@ -193,7 +231,7 @@
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 required
               />
-            </div>
+            </div> -->
             <!-- Email Field -->
             <div class="form-group contact__form-field">
               <label for="email">Email address</label>
@@ -206,7 +244,7 @@
               />
             </div>
             <!-- Type of Lot -->
-            <div class="form-group contact__form-field">
+            <!-- <div class="form-group contact__form-field">
               <label for="typeOfLot">Type of Lot</label>
               <select
                 class="form-control contact__form-input"
@@ -218,9 +256,9 @@
                 <option>Corner</option>
                 <i class="fa fa-angle-down" aria-hidden="true"></i>
               </select>
-            </div>
+            </div> -->
             <!-- Type of Service -->
-            <div class="form-group contact__form-field">
+            <!-- <div class="form-group contact__form-field">
               <label for="typeOfService">Type of Service</label>
               <select
                 class="form-control contact__form-input"
@@ -230,9 +268,9 @@
                 <option>Weekly</option>
                 <option>Full Service</option>
               </select>
-            </div>
+            </div> -->
             <!-- Pets -->
-            <div class="form-group contact__form-field">
+            <!-- <div class="form-group contact__form-field">
               <label for="pets">Pets in yard?</label>
               <select
                 class="form-control contact__form-input"
@@ -242,9 +280,9 @@
                 <option>Yes</option>
                 <option>No</option>
               </select>
-            </div>
+            </div> -->
             <!-- Gate Locks -->
-            <div class="form-group contact__form-field">
+            <!-- <div class="form-group contact__form-field">
               <label for="gatelocks">Gates Locked?</label>
               <select
                 class="form-control contact__form-input"
@@ -254,7 +292,7 @@
                 <option>Yes</option>
                 <option>No</option>
               </select>
-            </div>
+            </div> -->
             <!-- Recaptcha -->
             <div class="form-group">
               <div data-netlify-recaptcha="true"></div>
@@ -263,18 +301,27 @@
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Check box example</label>
             </div> -->
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn">Submit</button>
           </form>
         </div>
 
         <div class="service__wrapper">
-          <div class="service service--1"><h2>Landscape</h2></div>
-          <div class="service service--2"><h2>Hardscape</h2></div>
-          <div class="service service--3"><h2>Design</h2></div>
-          <div class="service service--4"><h2>Maintenance</h2></div>
+          <div class="service service--1">
+            <h2 class="service__header">Landscape</h2>
+          </div>
+          <div class="service service--2">
+            <h2 class="service__header">Hardscape</h2>
+          </div>
+          <div class="service service--3">
+            <h2 class="service__header">Design</h2>
+          </div>
+          <div class="service service--4">
+            <h2 class="service__header">Maintenance</h2>
+          </div>
         </div>
       </main>
 
+      <!-- Footer Section -->
       <footer class="footer">
         <a class="footer__logo">
           <img
@@ -286,27 +333,27 @@
         <div class="footer__links">
           <a href="" class="footer__link privacy-policy">Privacy Policy</a>
           <a href="" class="footer__link disclaimer">Disclaimer</a>
-          <a href="" class="footer__link damages">Damages</a>
+          <a href="" class="footer__link damages">Damage Claims</a>
         </div>
         <div class="footer__info">
-          <h2 class="footer__name">RMJ Landscapes, Inc.</h2>
-          <address>
-            <span class="po-box">PO Box 940144 </span
-            ><span class="city">Plano</span>, <span class="state">TX</span>
-            <span class="zip">75094</span>
-          </address>
-          <a href="tel:972-424-7252"
-            ><span class="phone-number">972-424-7251</span></a
-          >
+          <span class="footer__po-box">PO Box 940144</span>
+          <span class="footer__city">Plano, </span
+          ><span class="footer__state">TX</span>
+          <span class="footer__zip">75094</span>
+          <a class="footer__phone" href="tel:972-424-7252">972-424-7251</a>
         </div>
       </footer>
     </div>
     <!-- Scripts -->
-    <script src="js/main.js"></script>
+    <!-- Flickity Script -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <!-- Bootstrap Script -->
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <!-- My Script -->
+    <script src="js/main.js"></script>
   </body>
 </html>

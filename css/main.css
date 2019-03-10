@@ -137,8 +137,13 @@ body {
   height: 100vh;
   font-family: "Montserrat", sans-serif; }
   body > .container {
-    box-shadow: 0 0 12px #333;
-    padding: 0; }
+    box-shadow: 2px 5px 12px #333;
+    padding: 0;
+    width: 100%;
+    max-width: none; }
+    @media (min-width: 768px) {
+      body > .container {
+        max-width: 70%; } }
 
 main {
   background: #fff;
@@ -158,15 +163,61 @@ a {
     cursor: pointer;
     text-decoration: none; }
 
+.btn {
+  background: #890b0b;
+  color: #fff;
+  width: 300px;
+  display: block; }
+  .btn:hover {
+    background: #5a0707;
+    color: #fff; }
+
 .header {
   background: #d8c895;
+  padding: 20px;
   display: flex;
-  padding: 20px; }
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .header {
+      flex-direction: row; } }
   .header__logo-wrapper {
-    flex: 0 0 30%; }
+    display: flex;
+    justify-content: center; }
+    @media (min-width: 768px) {
+      .header__logo-wrapper {
+        display: block;
+        flex: 0 0 30%; } }
+    .header__logo-wrapper a {
+      display: inline-block; }
   .header__logo {
     display: block;
+    margin: 0 auto;
     width: 240px; }
+  .header__accolades {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0; }
+    .header__accolades img {
+      width: 50px;
+      display: inline-block;
+      height: auto;
+      margin: 0 5px; }
+      @media (min-width: 768px) {
+        .header__accolades img {
+          width: 100px; } }
+  .header__cta-wrapper {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .header__cta .btn {
+    margin: 0 auto; }
+    @media (min-width: 768px) {
+      .header__cta .btn {
+        margin: 0 0 0 auto; } }
+  .header__cta:nth-of-type(2) {
+    margin-top: 10px; }
   .header__info {
     flex: 1 0 auto;
     text-align: right; }
@@ -195,82 +246,92 @@ a {
     display: inline-block;
     padding: 5px 20px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.75rem; }
+    letter-spacing: 2px;
+    font-size: 0.9rem; }
     .nav__link:hover {
       color: #000; }
   .nav__item {
-    border-right: 3px solid #000; }
+    border-right: 2px solid #000; }
     .nav__item:last-of-type {
       border-right: none; }
 
+.hero {
+  padding: 20px 40px;
+  width: 80%;
+  margin: 0 auto 20px; }
+  .hero__slider {
+    position: relative; }
+    .hero__slider::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: #000;
+      opacity: 0.3;
+      z-index: -1; }
+  .hero__cell {
+    height: 400px;
+    width: 100%; }
+    .hero__cell--1 {
+      background: url(https://rmjlandscapes.com/portfolio/11.jpg) center center/cover no-repeat; }
+    .hero__cell--2 {
+      background: url(https://rmjlandscapes.com/portfolio/12.jpg) center center/cover no-repeat; }
+    .hero__cell--3 {
+      background: url(https://rmjlandscapes.com/portfolio/14.jpg) center center/cover no-repeat; }
+    .hero__cell--4 {
+      background: url(https://rmjlandscapes.com/portfolio/17.jpg) center center/cover no-repeat; }
+    .hero__cell--5 {
+      background: url(https://rmjlandscapes.com/portfolio/20.jpg) center center/cover no-repeat; }
+  .hero .flickity-button {
+    background: 0;
+    color: #fff; }
+
 .contact {
-  padding: 20px;
+  background: #000;
+  color: #fff;
+  padding: 60px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  .contact__headline {
+    color: #fff;
+    margin: 0 0 30px 0; }
   .contact__form {
-    width: 70%; }
+    width: 60%; }
     .contact__form-field {
       padding: 0 10px;
       display: flex;
       align-items: center;
       position: relative; }
-      .contact__form-field::after {
-        content: "\f107";
-        font-size: 1rem;
-        color: #aaa;
-        -webkit-transform: rotate(90deg);
-        -moz-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        transform: rotate(90deg);
-        right: 15px;
-        top: 2px;
-        padding: 0 0 2px;
-        position: absolute;
-        pointer-events: none; }
     .contact__form-input {
       border: none !important;
       border-bottom: 1px solid #777 !important;
       border-radius: 0 !important;
-      height: 40px;
-      -webkit-appearance: none;
-      -webkit-border-radius: 0px; }
+      height: 40px; }
     .contact__form select {
       padding: 3px;
       margin: 0;
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      border-radius: 4px;
-      -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-      -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-      box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      border-radius: 0px;
       background: #f8f8f8;
       color: #888;
       border: none;
       outline: none;
       display: inline-block;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
       cursor: pointer; }
   .contact label {
     flex: 1 0 auto;
     margin-right: 10px; }
-
-.hero {
-  padding: 20px 40px;
-  width: 80%;
-  margin: 0 auto; }
-  .hero__cell {
-    height: 400px; }
-    .hero__cell--1 {
-      background: url(/dist/images/1.jpg) center center/cover no-repeat; }
+  .contact .btn {
+    margin: 0 auto; }
 
 .service {
   grid-column: auto/span 12;
-  min-height: 200px;
+  min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -278,7 +339,7 @@ a {
   color: #fff;
   font-size: 1.75rem; }
   .service__wrapper {
-    padding: 10px;
+    padding: 40px 30px;
     display: grid;
     grid-row-gap: 10px;
     grid-column-gap: 10px;
@@ -291,18 +352,22 @@ a {
     right: 0;
     left: 0;
     background: #000;
-    opacity: 0.3;
+    opacity: 0.7;
     transition: 0.3s all; }
   .service:hover::after {
-    opacity: 0.8; }
+    opacity: 0.5; }
   .service--1 {
-    background: url(//kvlandscapes.com/wp-content/uploads/2017/04/nice-lawn.jpg) center center/cover no-repeat; }
+    background: url(https://rmjlandscapes.com/portfolio/11.jpg) center center/cover no-repeat; }
   .service--2 {
-    background: url(https://www.virginiagreenlawncare.com/wp-content/uploads/2015/05/20150429_3809_nightmuse_0006.jpg) center center/cover no-repeat; }
+    background: url(//rmjlandscapes.com/portfolio/9.jpg) center center/cover no-repeat; }
   .service--3 {
-    background: url(https://www.grofflandscapedesign.com/wp-content/uploads/2016/09/SmallerProjects.jpg) center center/cover no-repeat; }
+    background: url(//rmjlandscapes.com/portfolio/10.jpg) center center/cover no-repeat; }
   .service--4 {
-    background: url(https://gvtreeservice.com/wp-content/uploads/2016/09/tree-service.jpg) center center/cover no-repeat; }
+    background: url(//rmjlandscapes.com/portfolio/19.jpg) center center/cover no-repeat; }
+  .service__header {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 1; }
 
 .footer {
   background: #d8c895;
@@ -313,25 +378,23 @@ a {
     color: #890b0b;
     text-decoration: none; }
   .footer__logo {
-    display: block;
+    display: inline-block;
     margin: 10px auto 20px; }
     .footer__logo-img {
       width: 225px; }
   .footer__links {
     display: flex;
-    justify-content: center; }
-  .footer__link {
-    display: block;
-    margin: 0 10px;
-    color: #000; }
-  .footer__info {
-    margin: 10px 0; }
-  .footer__name {
-    font-size: 1.2rem;
+    justify-content: center;
     margin: 20px 0; }
-  .footer .phone-number {
+  .footer__link {
+    border-right: 2px solid #000;
     color: #000;
-    margin: 5px 0;
-    display: block; }
-    .footer .phone-number:hover {
-      color: #890b0b; }
+    display: block;
+    padding: 0 20px; }
+    .footer__link:last-of-type {
+      border-right: none; }
+  .footer__address {
+    margin: 20px 0; }
+  .footer__phone {
+    margin-left: 30px;
+    color: #000; }
